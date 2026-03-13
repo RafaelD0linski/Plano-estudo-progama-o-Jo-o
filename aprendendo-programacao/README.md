@@ -1,8 +1,8 @@
 # 📚 Aprendendo Programação
 
 Repositório para acompanhar a evolução no aprendizado de programação.  
-**Ferramenta principal:** Node.js + JavaScript  
-**Como rodar:** `node arquivo.js`
+**Ferramenta principal:** Python (curso Guanabara)  
+**Como rodar:** `python arquivo.py`
 
 ---
 

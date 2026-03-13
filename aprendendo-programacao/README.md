@@ -8,7 +8,7 @@ Repositório para acompanhar a evolução no aprendizado de programação.
 
 ## 📅 Guia por semanas
 
-**[Abrir guia por semanas](guia-semanas/index.html)** — tela com o calendário semanal e o link do curso da Udemy (Algoritmos e Lógica de Programação). Abra o `index.html` no navegador.
+**[Abrir guia por semanas](guia-semanas/index.html)** — tela com o calendário semanal e o curso do Gustavo Guanabara (YouTube, Algoritmos e Lógica de Programação). Abra o `index.html` no navegador.
 
 **Exercícios de fixação:** na pasta [guia-semanas/exercicios-fixacao](guia-semanas/exercicios-fixacao/) há **10 exercícios por semana** (semana 1 a 11), no formato **desafio + solução em código**. Veja o [README da pasta](guia-semanas/exercicios-fixacao/README.md) para a lista completa.
 

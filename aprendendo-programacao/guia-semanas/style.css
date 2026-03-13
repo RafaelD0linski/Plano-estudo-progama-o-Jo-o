@@ -105,6 +105,17 @@ body {
   background: var(--udemy-hover);
 }
 
+.curso-destaque .video-wrapper {
+  margin: 1rem 0;
+}
+
+.curso-destaque .video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
 /* Rotina */
 .rotina {
   margin-bottom: 2rem;

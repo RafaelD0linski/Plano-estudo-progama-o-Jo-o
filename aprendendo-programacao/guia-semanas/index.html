@@ -18,10 +18,13 @@
 
     <section class="curso-destaque">
       <div class="curso-badge">Curso principal</div>
-      <h2>Algoritmos e Lógica de Programação — O Curso COMPLETO</h2>
-      <p class="curso-desc">Do VisualG às principais linguagens: C, C++, Python, C# e Java. Mais de 50 exercícios com correção. Por <strong>Nelio Alves</strong>.</p>
-      <a href="https://www.udemy.com/course/curso-algoritmos-logica-de-programacao/learn/lecture/16810594?start=0#overview" target="_blank" rel="noopener noreferrer" class="btn-curso">
-        Abrir curso na Udemy
+      <h2>Curso de Algoritmos e Lógica de Programação</h2>
+      <p class="curso-desc">Playlist completa em vídeo para estudar do zero. Por <strong>Gustavo Guanabara</strong> (Curso em Vídeo).</p>
+      <div class="video-wrapper video-destaque">
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLIbmlYZ19yU4tmcsZnvBS038l-DDlNiQg" title="Curso Gustavo Guanabara - Algoritmos" allowfullscreen></iframe>
+      </div>
+      <a href="https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLIbmlYZ19yU4tmcsZnvBS038l-DDlNiQg" target="_blank" rel="noopener noreferrer" class="btn-curso">
+        Abrir playlist no YouTube
       </a>
     </section>
 
@@ -52,7 +55,7 @@
             </div>
             <div class="video-wrapper">
               <p class="video-label">Tutorial: Instalar e usar Visual Studio Code</p>
-              <iframe src="https://www.youtube.com/embed/EclGjH5_AR4" title="Visual Studio Code" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/watch?v=oDgjp7PfX7c" title="Visual Studio Code" allowfullscreen></iframe>
             </div>
             <ul class="links-preparacao">
               <li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Baixar Git</a></li>
@@ -167,8 +170,40 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: perímetro, área do círculo, conversão segundos→horas, salário líquido, aumento %, maior entre 2 números, litros combustível, metros→cm, IMC, dobro/triplo.</p>
-            <a href="exercicios-fixacao/semana-02.md" class="link-ver-todos">Ver todos os exercícios da Semana 2 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Calcule o perímetro de um quadrado de lado 6 e exiba.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let lado = 6
+let perimetro = 4 * lado
+console.log("Perímetro:", perimetro)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Dado o raio 5, calcule a área do círculo (π × r²). Use Math.PI.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let raio = 5
+let area = Math.PI * raio * raio
+console.log("Área do círculo:", area.toFixed(2))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Converta 3600 segundos em horas e exiba (ex: "1 hora(s)").</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let segundos = 3600
+let horas = segundos / 3600
+console.log(horas + " hora(s)")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Dado salário bruto 3000 e desconto 10%, exiba o salário líquido.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let salarioBruto = 3000
+let desconto = 0.10
+let salarioLiquido = salarioBruto * (1 - desconto)
+console.log("Salário líquido: R$", salarioLiquido)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Calcule o aumento de 15% sobre um preço 100 e exiba o novo preço.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let preco = 100
+let aumento = 0.15
+let novoPreco = preco * (1 + aumento)
+console.log("Novo preço: R$", novoPreco)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Dados dois números, exiba o maior (sem usar if).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let a = 12, b = 8
+let maior = a > b ? a : b
+console.log("Maior:", maior)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Calcule quantos litros um carro gasta em 400 km se faz 12 km/l.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let distancia = 400, kmPorLitro = 12
+let litros = distancia / kmPorLitro
+console.log("Litros:", litros.toFixed(2))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Dado um valor em metros, exiba o equivalente em centímetros.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let metros = 2.5
+let centimetros = metros * 100
+console.log(metros + " m = " + centimetros + " cm")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Calcule o IMC: massa 70 kg, altura 1,75 m. Fórmula: IMC = massa / (altura × altura).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let massa = 70, altura = 1.75
+let imc = massa / (altura * altura)
+console.log("IMC:", imc.toFixed(2))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Exiba o dobro e o triplo de um número armazenado em uma variável.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let num = 5
+console.log("Dobro:", num * 2)
+console.log("Triplo:", num * 3)</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -178,8 +213,43 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: maior de idade, positivo/negativo/zero, aprovado/reprovado, par/ímpar, maior de 2, média (aprov/recup/reprov), ano bissexto, múltiplo de 5, login, preço caro/barato.</p>
-            <a href="exercicios-fixacao/semana-03.md" class="link-ver-todos">Ver todos os exercícios da Semana 3 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Dada uma idade, exiba "Maior de idade" ou "Menor de idade".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let idade = 17
+if (idade >= 18) console.log("Maior de idade")
+else console.log("Menor de idade")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Dado um número, exiba "Positivo", "Negativo" ou "Zero".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let num = -5
+if (num > 0) console.log("Positivo")
+else if (num < 0) console.log("Negativo")
+else console.log("Zero")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Dada uma nota (0 a 10), exiba "Aprovado" se ≥ 7, senão "Reprovado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let nota = 6.5
+if (nota >= 7) console.log("Aprovado")
+else console.log("Reprovado")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Verifique se um número é par (exiba "Par" ou "Ímpar"). Use resto da divisão por 2.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let n = 10
+if (n % 2 === 0) console.log("Par")
+else console.log("Ímpar")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Dados dois números, exiba o maior (ou "Iguais" se forem iguais).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let a = 10, b = 10
+if (a > b) console.log("Maior:", a)
+else if (b > a) console.log("Maior:", b)
+else console.log("Iguais")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Dada a média, exiba: "Aprovado" (≥7), "Recuperação" (≥5 e &lt;7) ou "Reprovado" (&lt;5).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let media = 5.5
+if (media >= 7) console.log("Aprovado")
+else if (media >= 5) console.log("Recuperação")
+else console.log("Reprovado")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Verifique se um ano é bissexto. Regra: divisível por 400, ou (por 4 e não por 100).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let ano = 2024
+if (ano % 400 === 0 || (ano % 4 === 0 && ano % 100 !== 0))
+  console.log("Bissexto")
+else console.log("Não é bissexto")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Dado um número, exiba "É múltiplo de 5" ou "Não é múltiplo de 5".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let num = 25
+if (num % 5 === 0) console.log("É múltiplo de 5")
+else console.log("Não é múltiplo de 5")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Simule login: usuário "admin" e senha "123". Se corretos, "Acesso permitido"; senão "Acesso negado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let usuario = "admin", senha = "123"
+if (usuario === "admin" && senha === "123")
+  console.log("Acesso permitido")
+else console.log("Acesso negado")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Dado o preço, se for maior que 100 exiba "Caro", senão "Barato".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let preco = 150
+if (preco > 100) console.log("Caro")
+else console.log("Barato")</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -189,8 +259,27 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: 1 a 10, tabuada do 7, contagem regressiva, soma 1 a 100, pares 0-20, múltiplos de 3, fatorial de 5, "Olá" 5x, 20 até 10, soma dos ímpares 1-50.</p>
-            <a href="exercicios-fixacao/semana-04.md" class="link-ver-todos">Ver todos os exercícios da Semana 4 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Exiba os números de 1 até 10, um por linha.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 1; i <= 10; i++) console.log(i)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Exiba a tabuada do 7 (7 × 1 até 7 × 10).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let n = 7
+for (let i = 1; i <= 10; i++)
+  console.log(n + " x " + i + " = " + (n * i))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Contagem regressiva de 10 até 1 e exiba "Fogo!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 10; i >= 1; i--) console.log(i)
+console.log("Fogo!")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Some todos os números de 1 a 100 e exiba o resultado.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let soma = 0
+for (let i = 1; i <= 100; i++) soma += i
+console.log("Soma de 1 a 100:", soma)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Exiba apenas os números pares entre 0 e 20.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 0; i <= 20; i += 2) console.log(i)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Exiba os 10 primeiros múltiplos de 3 (3, 6, 9, ...).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 1; i <= 10; i++) console.log(3 * i)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Calcule o fatorial de 5 (5! = 120).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let n = 5, fatorial = 1
+for (let i = n; i >= 1; i--) fatorial *= i
+console.log("5! =", fatorial)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Use um loop para exibir "Olá" 5 vezes.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 0; i < 5; i++) console.log("Olá")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Exiba os números de 20 até 10 (ordem decrescente).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>for (let i = 20; i >= 10; i--) console.log(i)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Some apenas os números ímpares de 1 a 50 e exiba.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let soma = 0
+for (let i = 1; i <= 50; i += 2) soma += i
+console.log("Soma dos ímpares:", soma)</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -200,8 +289,32 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: soma(a,b), media(n1,n2,n3), maiorDeIdade(), parOuImpar(), dobro(), areaRetangulo(), max(a,b), positivoOuNegativo(), fatorial(), aprovado().</p>
-            <a href="exercicios-fixacao/semana-05.md" class="link-ver-todos">Ver todos os exercícios da Semana 5 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Crie uma função <code>soma(a, b)</code> que retorna a soma. Chame com 5 e 3.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function soma(a, b) { return a + b }
+console.log(soma(5, 3))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Crie uma função <code>media(n1, n2, n3)</code> que retorna a média de três notas.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function media(n1, n2, n3) {
+  return (n1 + n2 + n3) / 3
+}
+console.log(media(8, 7, 9).toFixed(1))</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Crie <code>maiorDeIdade(idade)</code> que retorna true se idade ≥ 18.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function maiorDeIdade(idade) { return idade >= 18 }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Crie <code>parOuImpar(n)</code> que retorna "Par" ou "Ímpar".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function parOuImpar(n) {
+  return n % 2 === 0 ? "Par" : "Ímpar"
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Crie uma função <code>dobro(n)</code> que retorna o dobro.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function dobro(n) { return n * 2 }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Crie <code>areaRetangulo(base, altura)</code> que retorna a área.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function areaRetangulo(base, altura) { return base * altura }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Crie <code>max(a, b)</code> que retorna o maior dos dois.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function max(a, b) { return a > b ? a : b }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Crie <code>positivoOuNegativo(n)</code> que retorna "Positivo", "Negativo" ou "Zero".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function positivoOuNegativo(n) {
+  if (n > 0) return "Positivo"
+  if (n < 0) return "Negativo"
+  return "Zero"
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Crie <code>fatorial(n)</code> que retorna o fatorial (ex: fatorial(5) = 120).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function fatorial(n) {
+  let resultado = 1
+  for (let i = n; i >= 1; i--) resultado *= i
+  return resultado
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Crie <code>aprovado(nota)</code> que retorna true se nota ≥ 7.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function aprovado(nota) { return nota >= 7 }</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -211,8 +324,40 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: frutas[0] e último, soma do array, maior número, índice+elemento, média, length, só pares, menor, push 3 nomes, inverter array.</p>
-            <a href="exercicios-fixacao/semana-06.md" class="link-ver-todos">Ver todos os exercícios da Semana 6 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Crie um array com 5 frutas e exiba o primeiro e o último elemento.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let frutas = ["maçã", "banana", "laranja", "uva", "manga"]
+console.log(frutas[0])
+console.log(frutas[frutas.length - 1])</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Dado o array [10, 20, 30, 40, 50], calcule e exiba a soma de todos os elementos.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let numeros = [10, 20, 30, 40, 50]
+let soma = 0
+for (let i = 0; i &lt; numeros.length; i++) soma += numeros[i]
+console.log("Soma:", soma)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Encontre o maior número no array [3, 7, 2, 9, 1, 5].</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [3, 7, 2, 9, 1, 5]
+let maior = arr[0]
+for (let n of arr) { if (n > maior) maior = n }
+console.log("Maior:", maior)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Percorra ["a", "b", "c", "d"] e exiba cada elemento com seu índice (ex: "0: a").</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let letras = ["a", "b", "c", "d"]
+for (let i = 0; i &lt; letras.length; i++)
+  console.log(i + ": " + letras[i])</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Calcule a média dos números do array [8, 7, 9, 6, 10].</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let notas = [8, 7, 9, 6, 10]
+let soma = 0
+for (let n of notas) soma += n
+console.log("Média:", soma / notas.length)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Conte quantos elementos tem o array [1, 2, 3, 4, 5] e exiba.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [1, 2, 3, 4, 5]
+console.log("Quantidade:", arr.length)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Dado um array de números, exiba apenas os pares.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let numeros = [1, 2, 3, 4, 5, 6]
+for (let n of numeros) { if (n % 2 === 0) console.log(n) }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Encontre o menor número no array [12, 5, 8, 20, 3].</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [12, 5, 8, 20, 3]
+let menor = arr[0]
+for (let n of arr) { if (n &lt; menor) menor = n }
+console.log("Menor:", menor)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Crie um array vazio, adicione 3 nomes com push e exiba o array.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let nomes = []
+nomes.push("Ana"); nomes.push("Bruno"); nomes.push("Carla")
+console.log(nomes)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Inverta a ordem do array [1, 2, 3, 4] sem usar reverse.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [1, 2, 3, 4], invertido = []
+for (let i = arr.length - 1; i >= 0; i--) invertido.push(arr[i])
+console.log(invertido)</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -222,8 +367,44 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: objeto pessoa, alterar preço, array de alunos, soma de valores, função mostrarPessoa, mais velho, depositar em conta, produto mais caro, objeto com método, média de idades.</p>
-            <a href="exercicios-fixacao/semana-07.md" class="link-ver-todos">Ver todos os exercícios da Semana 7 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Crie um objeto <code>pessoa</code> com nome, idade e cidade. Exiba cada propriedade.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let pessoa = { nome: "Ana", idade: 25, cidade: "São Paulo" }
+console.log(pessoa.nome, pessoa.idade, pessoa.cidade)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Crie objeto <code>produto</code> (nome, preco, estoque). Altere o preço e exiba.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let produto = { nome: "Notebook", preco: 3500, estoque: 10 }
+produto.preco = 3200
+console.log(produto)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Array de 3 objetos (nome e nota). Percorra e exiba "Nome: X, Nota: Y".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let alunos = [{ nome: "João", nota: 8 }, { nome: "Maria", nota: 9 }, { nome: "Pedro", nota: 7 }]
+for (let a of alunos) console.log("Nome:", a.nome, "Nota:", a.nota)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Array de objetos com "valor". Some todos os valores e exiba.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let itens = [{ valor: 10 }, { valor: 20 }, { valor: 30 }]
+let total = 0
+for (let item of itens) total += item.valor
+console.log("Total:", total)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Função que recebe um objeto pessoa e retorna "Nome: X, Idade: Y".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function mostrarPessoa(p) {
+  return "Nome: " + p.nome + ", Idade: " + p.idade
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Array de pessoas (nome, idade). Encontre a de maior idade e exiba o nome.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let pessoas = [{ nome: "A", idade: 20 }, { nome: "B", idade: 35 }, { nome: "C", idade: 28 }]
+let maisVelha = pessoas[0]
+for (let p of pessoas) { if (p.idade > maisVelha.idade) maisVelha = p }
+console.log("Mais velha:", maisVelha.nome)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Objeto "conta" com saldo. Função que adiciona valor e retorna novo saldo.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let conta = { saldo: 100 }
+function depositar(conta, valor) {
+  conta.saldo += valor
+  return conta.saldo
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Array de produtos (nome, preco). Exiba o nome do mais caro.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let produtos = [{ nome: "A", preco: 100 }, { nome: "B", preco: 250 }, { nome: "C", preco: 80 }]
+let maisCaro = produtos[0]
+for (let p of produtos) { if (p.preco > maisCaro.preco) maisCaro = p }
+console.log("Mais caro:", maisCaro.nome)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Objeto com função dentro que retorna saudação (ex: "Olá, João").</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let usuario = {
+  nome: "João",
+  saudacao: function() { return "Olá, " + this.nome }
+}
+console.log(usuario.saudacao())</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Array de pessoas (nome, idade). Calcule e exiba a média das idades.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let pessoas = [{ nome: "A", idade: 20 }, { nome: "B", idade: 30 }, { nome: "C", idade: 25 }]
+let soma = 0
+for (let p of pessoas) soma += p.idade
+console.log("Média das idades:", soma / pessoas.length)</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -233,8 +414,46 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: maior e menor, média aprovado/reprovado, simular saque, contar pares, buscar "Maria", função somaArray, tabuadas 1 a N, maiores que 10, função maiorDoArray, aprovados (nota≥7).</p>
-            <a href="exercicios-fixacao/semana-08.md" class="link-ver-todos">Ver todos os exercícios da Semana 8 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Dado um array de números, exiba o maior e o menor.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [5, 12, 3, 8, 20, 1]
+let maior = arr[0], menor = arr[0]
+for (let n of arr) { if (n > maior) maior = n; if (n &lt; menor) menor = n }
+console.log("Maior:", maior, "Menor:", menor)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Array de notas: calcule a média e exiba "Aprovado" (≥7) ou "Reprovado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let notas = [8, 7, 6, 9]
+let soma = 0
+for (let n of notas) soma += n
+let media = soma / notas.length
+console.log(media >= 7 ? "Aprovado" : "Reprovado")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Simule um saque: se saldo ≥ valor, subtraia e exiba novo saldo; senão "Saldo insuficiente".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let saldo = 100, valorSaque = 60
+if (saldo >= valorSaque) { saldo -= valorSaque; console.log("Novo saldo:", saldo) }
+else console.log("Saldo insuficiente")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Conte quantos números pares existem no array [1, 2, 3, 4, 5, 6, 7, 8].</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [1, 2, 3, 4, 5, 6, 7, 8], count = 0
+for (let n of arr) { if (n % 2 === 0) count++ }
+console.log("Pares:", count)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Array de nomes: exiba "Encontrado" se existir "Maria", senão "Não encontrado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let nomes = ["João", "Pedro", "Maria", "Ana"]
+let encontrou = false
+for (let n of nomes) { if (n === "Maria") { encontrou = true; break } }
+console.log(encontrou ? "Encontrado" : "Não encontrado")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Função que recebe um array e retorna a soma dos elementos.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function somaArray(arr) {
+  let s = 0
+  for (let n of arr) s += n
+  return s
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Dado N, exiba a tabuada completa de 1 até N (ex: N=2 → tabuada do 1 e do 2).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let N = 2
+for (let t = 1; t &lt;= N; t++) {
+  console.log("Tabuada do", t)
+  for (let i = 1; i &lt;= 10; i++) console.log(t + " x " + i + " = " + (t * i))
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Array de números: exiba apenas os que são maiores que 10.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let arr = [5, 12, 3, 15, 8, 20]
+for (let n of arr) { if (n > 10) console.log(n) }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Função que recebe um array e retorna o maior número.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function maiorDoArray(arr) {
+  let maior = arr[0]
+  for (let n of arr) if (n > maior) maior = n
+  return maior
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Array de pessoas (nome, nota). Exiba o nome de quem teve nota ≥ 7.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let alunos = [{ nome: "Ana", nota: 8 }, { nome: "Bruno", nota: 5 }, { nome: "Carla", nota: 9 }]
+for (let a of alunos) { if (a.nota >= 7) console.log(a.nome) }</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -244,8 +463,39 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: h1+p, botão com id, ul/li, form com input, cores e fontes no CSS, container centralizado, h1 estilizado, classe .destaque, botão estilizado, link para Google.</p>
-            <a href="exercicios-fixacao/semana-09.md" class="link-ver-todos">Ver todos os exercícios da Semana 9 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Crie uma página com um título <code>&lt;h1&gt;</code> "Minha primeira página" e um parágrafo.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>&lt;h1&gt;Minha primeira página&lt;/h1&gt;
+&lt;p&gt;Estou aprendendo HTML e CSS.&lt;/p&gt;</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Adicione um botão com texto "Clique aqui" e id "btn".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>&lt;button id="btn"&gt;Clique aqui&lt;/button&gt;</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Crie uma lista não ordenada com 3 itens (ex: Café, Leite, Pão).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>&lt;ul&gt;
+  &lt;li&gt;Café&lt;/li&gt;&lt;li&gt;Leite&lt;/li&gt;&lt;li&gt;Pão&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Formulário com input de texto (placeholder "Seu nome") e botão "Enviar".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>&lt;input type="text" placeholder="Seu nome" id="nome"&gt;
+&lt;button type="button"&gt;Enviar&lt;/button&gt;</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">No CSS: fundo da página #f0f0f0 e fonte sans-serif.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>body {
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Centralize o conteúdo: margin: 0 auto e max-width: 600px em um div container.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Estilize todos os h1: cor #333 e tamanho 2rem.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>h1 { color: #333; font-size: 2rem; }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Classe .destaque: negrito e cor azul (#0066cc).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>.destaque {
+  font-weight: bold;
+  color: #0066cc;
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Estilize um botão: fundo azul, texto branco, padding 10px 20px, border-radius 8px.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Link para Google que abre em nova aba; CSS: cor #0066cc e sem sublinhado.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>&lt;a href="https://google.com" target="_blank" rel="noopener"&gt;Google&lt;/a&gt;
+a { color: #0066cc; text-decoration: none; }</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -255,8 +505,37 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 exercícios: alert ao clicar, alterar texto, alert com input, somar 2 números, contador, validar vazio, hover muda cor, alternar Ligado/Desligado, select onchange, login admin/123.</p>
-            <a href="exercicios-fixacao/semana-10.md" class="link-ver-todos">Ver todos os exercícios da Semana 10 →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Ao clicar em um botão, exiba um alert "Olá!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>document.getElementById("btn").onclick = function() {
+  alert("Olá!")
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Parágrafo id "texto". Ao clicar no botão, mude o texto para "Texto alterado!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>document.getElementById("btn").onclick = function() {
+  document.getElementById("texto").textContent = "Texto alterado!"
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Input id "nome" e botão. Ao clicar, alert com "Olá, [valor do input]!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let nome = document.getElementById("nome").value
+alert("Olá, " + nome + "!")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Dois inputs (n1 e n2) e botão "Somar". Exiba a soma em um parágrafo id "resultado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let a = Number(document.getElementById("n1").value)
+let b = Number(document.getElementById("n2").value)
+document.getElementById("resultado").textContent = "Soma: " + (a + b)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Botão e contador (parágrafo). A cada clique, incremente e exiba (0, 1, 2...).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let count = 0
+document.getElementById("btn").onclick = function() {
+  count++
+  document.getElementById("contador").textContent = count
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Input e botão "Validar". Se vazio, alert "Preencha o campo!". Senão "OK!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let valor = document.getElementById("campo").value.trim()
+if (valor === "") alert("Preencha o campo!")
+else alert("OK!")</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Parágrafo: ao passar o mouse, cor azul; ao tirar, preto.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>p.onmouseenter = function() { p.style.color = "blue" }
+p.onmouseleave = function() { p.style.color = "black" }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Botão que alterna o texto de um parágrafo entre "Ligado" e "Desligado".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>p.textContent = p.textContent === "Desligado" ? "Ligado" : "Desligado"</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Select com 3 opções. Ao mudar, exiba o valor escolhido em um parágrafo.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>document.getElementById("select").onchange = function() {
+  document.getElementById("saida").textContent = "Escolha: " + this.value
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Inputs usuário e senha, botão "Entrar". Se admin e 123, alert "Acesso OK"; senão "Dados incorretos".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let u = document.getElementById("user").value
+let s = document.getElementById("senha").value
+if (u === "admin" && s === "123") alert("Acesso OK")
+else alert("Dados incorretos")</code></pre></div></div>
+            </div>
           </div>
         </div>
 
@@ -266,8 +545,47 @@ console.log("p =", p, "q =", q)</code></pre></div>
             <span class="card-seta">▼</span>
           </div>
           <div class="card-conteudo">
-            <p class="card-dica">10 desafios: calculadora, lista de tarefas, login com validação, controle de gastos, quadrados coloridos, lista sem duplicados, contador 0-10, select muda fundo, tarefas com checkbox, cadastro com validação.</p>
-            <a href="exercicios-fixacao/semana-11.md" class="link-ver-todos">Ver todos os exercícios da Semana 11+ →</a>
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 1</h4><p class="mini-card-desafio">Calculadora: dois inputs e quatro botões (Soma, Subtração, Mult, Div). Exiba o resultado.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>function calcular(op) {
+  let a = Number(document.getElementById("n1").value)
+  let b = Number(document.getElementById("n2").value)
+  let res = op === '+' ? a + b : op === '-' ? a - b : op === '*' ? a * b : a / b
+  document.getElementById("r").textContent = "Resultado: " + res
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 2</h4><p class="mini-card-desafio">Lista de tarefas: input + botão "Adicionar". Cada item com botão "Remover".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>let li = document.createElement("li")
+li.textContent = texto + " "
+let btn = document.createElement("button")
+btn.textContent = "Remover"
+btn.onclick = function() { li.remove() }
+li.appendChild(btn)
+lista.appendChild(li)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 3</h4><p class="mini-card-desafio">Login: usuário e senha. Se vazios, mensagem vermelha; se preenchidos, verde "Enviado!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>if (u === "" || s === "") {
+  p.textContent = "Preencha todos os campos"
+  p.style.color = "red"
+} else {
+  p.textContent = "Enviado!"
+  p.style.color = "green"
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 4</h4><p class="mini-card-desafio">Controle de gastos: descrição, valor, botão "Adicionar". Liste gastos e exiba o total.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>total += val
+let li = document.createElement("li")
+li.textContent = desc + " - R$ " + val.toFixed(2)
+gastos.appendChild(li)
+totalEl.textContent = "Total: R$ " + total.toFixed(2)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 5</h4><p class="mini-card-desafio">Botão: a cada clique, adicione um quadrado 50×50px com cor aleatória.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>div.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16)
+container.appendChild(div)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 6</h4><p class="mini-card-desafio">Input + botão. Se o texto já existir na lista, não adicione e alert "Já existe!".</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>if (itens.includes(texto)) { alert("Já existe!"); return }
+itens.push(texto)</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 7</h4><p class="mini-card-desafio">Contador com botões "+" e "-". Número entre 0 e 10.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>if (n > 0) { n--; atualizar() }
+if (n &lt; 10) { n++; atualizar() }</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 8</h4><p class="mini-card-desafio">Select (Vermelho, Verde, Azul). Ao mudar, altere a cor de fundo do body.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>document.body.style.backgroundColor = this.value || "white"</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 9</h4><p class="mini-card-desafio">Lista de tarefas com checkbox. Ao marcar, risque o texto (line-through).</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>cb.onchange = function() {
+  li.style.textDecoration = cb.checked ? "line-through" : "none"
+}</code></pre></div></div>
+              <div class="mini-card-exercicio"><h4 class="mini-card-titulo">Exercício 10</h4><p class="mini-card-desafio">Cadastro: nome, email, idade. Valide: não vazios; idade entre 1 e 120. "Cadastrado!" ou erro.</p><button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button><div class="gabarito"><pre><code>if (!nome) { p.textContent = "Nome obrigatório"; p.style.color = "red"; return }
+if (!email) { p.textContent = "E-mail obrigatório"; p.style.color = "red"; return }
+if (idade &lt; 1 || idade &gt; 120) { p.textContent = "Idade entre 1 e 120"; return }
+p.textContent = "Cadastrado!"; p.style.color = "green"</code></pre></div></div>
+            </div>
           </div>
         </div>
       </div>

@@ -36,21 +36,254 @@
 
     <section class="exercicios-fixacao">
       <h3>Exercícios de fixação (10 por semana)</h3>
-      <p>Em cada semana há <strong>10 desafios</strong> com a <strong>solução em código</strong>. Tente fazer antes de abrir a solução. Clique na semana:</p>
-      <div class="grid-exercicios">
-        <a href="exercicios-fixacao/semana-01.md" class="card-exercicio">Semana 1<br><span>Variáveis</span></a>
-        <a href="exercicios-fixacao/semana-02.md" class="card-exercicio">Semana 2<br><span>Sequencial</span></a>
-        <a href="exercicios-fixacao/semana-03.md" class="card-exercicio">Semana 3<br><span>Condicionais</span></a>
-        <a href="exercicios-fixacao/semana-04.md" class="card-exercicio">Semana 4<br><span>Loops</span></a>
-        <a href="exercicios-fixacao/semana-05.md" class="card-exercicio">Semana 5<br><span>Funções</span></a>
-        <a href="exercicios-fixacao/semana-06.md" class="card-exercicio">Semana 6<br><span>Arrays</span></a>
-        <a href="exercicios-fixacao/semana-07.md" class="card-exercicio">Semana 7<br><span>Objetos</span></a>
-        <a href="exercicios-fixacao/semana-08.md" class="card-exercicio">Semana 8<br><span>Algoritmos</span></a>
-        <a href="exercicios-fixacao/semana-09.md" class="card-exercicio">Semana 9<br><span>HTML e CSS</span></a>
-        <a href="exercicios-fixacao/semana-10.md" class="card-exercicio">Semana 10<br><span>JS no navegador</span></a>
-        <a href="exercicios-fixacao/semana-11.md" class="card-exercicio">Semanas 11+<br><span>Projetos</span></a>
+      <p>Clique no card para expandir. Em cada exercício, tente resolver antes de conferir o gabarito.</p>
+      <div class="cards-exercicios">
+        <!-- Card de preparação (antes da Semana 1) -->
+        <div class="card-exercicio expansivel card-preparacao" data-semana="0">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Preparação para o curso</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">Antes de começar a programar, instale e configure as ferramentas: <strong>Git</strong>, <strong>GitHub</strong> e <strong>Visual Studio Code</strong>. Assista aos tutoriais abaixo.</p>
+            <div class="video-wrapper">
+              <p class="video-label">Tutorial: Git e GitHub — instalação e configuração</p>
+              <iframe src="https://www.youtube.com/embed/2uj7fD92g-gE" title="Git e GitHub" allowfullscreen></iframe>
+            </div>
+            <div class="video-wrapper">
+              <p class="video-label">Tutorial: Instalar e usar Visual Studio Code</p>
+              <iframe src="https://www.youtube.com/embed/EclGjH5_AR4" title="Visual Studio Code" allowfullscreen></iframe>
+            </div>
+            <ul class="links-preparacao">
+              <li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Baixar Git</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener">Criar conta no GitHub</a></li>
+              <li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Baixar Visual Studio Code</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="1">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 1 — Variáveis</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <div class="tela-exercicios">
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 1</h4>
+                <p class="mini-card-desafio">Crie duas variáveis: <code>nome</code> e <code>idade</code>. Exiba no console a mensagem: "Olá, [nome], você tem [idade] anos."</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let nome = "João"
+let idade = 20
+console.log("Olá, " + nome + ", você tem " + idade + " anos.")</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 2</h4>
+                <p class="mini-card-desafio">Declare variáveis <code>a = 10</code> e <code>b = 3</code>. Exiba a soma, a subtração e a multiplicação entre elas.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let a = 10
+let b = 3
+console.log("Soma:", a + b)
+console.log("Subtração:", a - b)
+console.log("Multiplicação:", a * b)</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 3</h4>
+                <p class="mini-card-desafio">Calcule a área de um retângulo (base = 5, altura = 8) e exiba o resultado.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let base = 5
+let altura = 8
+let area = base * altura
+console.log("Área do retângulo:", area)</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 4</h4>
+                <p class="mini-card-desafio">Converta 30°C para Fahrenheit. Fórmula: F = C × 9/5 + 32.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let celsius = 30
+let fahrenheit = celsius * 9/5 + 32
+console.log(celsius + "°C = " + fahrenheit + "°F")</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 5</h4>
+                <p class="mini-card-desafio">Crie variáveis para preço (29.90) e quantidade (3). Calcule e exiba o total.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let preco = 29.90
+let quantidade = 3
+let total = preco * quantidade
+console.log("Total: R$ " + total.toFixed(2))</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 6</h4>
+                <p class="mini-card-desafio">Declare <code>x = 7</code> e <code>y = 2</code>. Exiba o resultado da divisão e o resto (módulo).</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let x = 7, y = 2
+console.log("Divisão:", x / y)
+console.log("Resto (módulo):", x % y)</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 7</h4>
+                <p class="mini-card-desafio">Armazene primeiro nome e sobrenome em variáveis. Exiba o nome completo em uma única string.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let primeiroNome = "Maria"
+let sobrenome = "Silva"
+let nomeCompleto = primeiroNome + " " + sobrenome
+console.log(nomeCompleto)</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 8</h4>
+                <p class="mini-card-desafio">Dado R$ 100 e cotação 5,50, exiba quantos dólares dá.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let reais = 100
+let cotacao = 5.50
+let dolares = reais / cotacao
+console.log("R$ " + reais + " = US$ " + dolares.toFixed(2))</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 9</h4>
+                <p class="mini-card-desafio">Calcule a média das notas 8, 7 e 9. Exiba o resultado.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let nota1 = 8, nota2 = 7, nota3 = 9
+let media = (nota1 + nota2 + nota3) / 3
+console.log("Média:", media.toFixed(1))</code></pre></div>
+              </div>
+              <div class="mini-card-exercicio">
+                <h4 class="mini-card-titulo">Exercício 10</h4>
+                <p class="mini-card-desafio">Troque os valores de <code>p = 1</code> e <code>q = 2</code> (sem digitar números de novo). Depois exiba p e q.</p>
+                <button type="button" class="btn-gabarito" onclick="toggleGabarito(this)">Conferir gabarito</button>
+                <div class="gabarito"><pre><code>let p = 1, q = 2
+let temp = p
+p = q
+q = temp
+console.log("p =", p, "q =", q)</code></pre></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="2">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 2 — Sequencial</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: perímetro, área do círculo, conversão segundos→horas, salário líquido, aumento %, maior entre 2 números, litros combustível, metros→cm, IMC, dobro/triplo.</p>
+            <a href="exercicios-fixacao/semana-02.md" class="link-ver-todos">Ver todos os exercícios da Semana 2 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="3">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 3 — Condicionais</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: maior de idade, positivo/negativo/zero, aprovado/reprovado, par/ímpar, maior de 2, média (aprov/recup/reprov), ano bissexto, múltiplo de 5, login, preço caro/barato.</p>
+            <a href="exercicios-fixacao/semana-03.md" class="link-ver-todos">Ver todos os exercícios da Semana 3 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="4">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 4 — Loops</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: 1 a 10, tabuada do 7, contagem regressiva, soma 1 a 100, pares 0-20, múltiplos de 3, fatorial de 5, "Olá" 5x, 20 até 10, soma dos ímpares 1-50.</p>
+            <a href="exercicios-fixacao/semana-04.md" class="link-ver-todos">Ver todos os exercícios da Semana 4 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="5">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 5 — Funções</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: soma(a,b), media(n1,n2,n3), maiorDeIdade(), parOuImpar(), dobro(), areaRetangulo(), max(a,b), positivoOuNegativo(), fatorial(), aprovado().</p>
+            <a href="exercicios-fixacao/semana-05.md" class="link-ver-todos">Ver todos os exercícios da Semana 5 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="6">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 6 — Arrays</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: frutas[0] e último, soma do array, maior número, índice+elemento, média, length, só pares, menor, push 3 nomes, inverter array.</p>
+            <a href="exercicios-fixacao/semana-06.md" class="link-ver-todos">Ver todos os exercícios da Semana 6 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="7">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 7 — Objetos</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: objeto pessoa, alterar preço, array de alunos, soma de valores, função mostrarPessoa, mais velho, depositar em conta, produto mais caro, objeto com método, média de idades.</p>
+            <a href="exercicios-fixacao/semana-07.md" class="link-ver-todos">Ver todos os exercícios da Semana 7 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="8">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 8 — Algoritmos</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: maior e menor, média aprovado/reprovado, simular saque, contar pares, buscar "Maria", função somaArray, tabuadas 1 a N, maiores que 10, função maiorDoArray, aprovados (nota≥7).</p>
+            <a href="exercicios-fixacao/semana-08.md" class="link-ver-todos">Ver todos os exercícios da Semana 8 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="9">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 9 — HTML e CSS</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: h1+p, botão com id, ul/li, form com input, cores e fontes no CSS, container centralizado, h1 estilizado, classe .destaque, botão estilizado, link para Google.</p>
+            <a href="exercicios-fixacao/semana-09.md" class="link-ver-todos">Ver todos os exercícios da Semana 9 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="10">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semana 10 — JS no navegador</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 exercícios: alert ao clicar, alterar texto, alert com input, somar 2 números, contador, validar vazio, hover muda cor, alternar Ligado/Desligado, select onchange, login admin/123.</p>
+            <a href="exercicios-fixacao/semana-10.md" class="link-ver-todos">Ver todos os exercícios da Semana 10 →</a>
+          </div>
+        </div>
+
+        <div class="card-exercicio expansivel" data-semana="11">
+          <div class="card-header" onclick="toggleCard(this)">
+            <span class="card-titulo">Semanas 11+ — Projetos</span>
+            <span class="card-seta">▼</span>
+          </div>
+          <div class="card-conteudo">
+            <p class="card-dica">10 desafios: calculadora, lista de tarefas, login com validação, controle de gastos, quadrados coloridos, lista sem duplicados, contador 0-10, select muda fundo, tarefas com checkbox, cadastro com validação.</p>
+            <a href="exercicios-fixacao/semana-11.md" class="link-ver-todos">Ver todos os exercícios da Semana 11+ →</a>
+          </div>
+        </div>
       </div>
     </section>
+
+    <script>
+      function toggleCard(header) {
+        const card = header.parentElement
+        card.classList.toggle('aberto')
+      }
+      function toggleGabarito(btn) {
+        const gabarito = btn.nextElementSibling
+        const estaAberto = gabarito.classList.toggle('aberto')
+        btn.textContent = estaAberto ? 'Ocultar gabarito' : 'Conferir gabarito'
+      }
+    </script>
 
     <section class="semanas">
       <h3>Calendário por semana</h3>

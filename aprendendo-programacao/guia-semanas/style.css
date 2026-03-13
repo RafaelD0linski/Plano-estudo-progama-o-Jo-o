@@ -145,37 +145,184 @@ body {
   margin-bottom: 1rem;
 }
 
-.grid-exercicios {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+.cards-exercicios {
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
 }
 
-.card-exercicio {
-  display: block;
+.card-exercicio.expansivel {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
 }
 
-.card-exercicio:hover {
-  border-color: var(--accent);
+.card-exercicio .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  transition: background 0.2s;
+}
+
+.card-exercicio .card-header:hover {
   background: rgba(99, 102, 241, 0.08);
 }
 
-.card-exercicio span {
-  display: block;
-  font-weight: 400;
-  font-size: 0.8rem;
+.card-exercicio .card-seta {
+  font-size: 0.75rem;
   color: var(--text-muted);
-  margin-top: 0.25rem;
+  transition: transform 0.2s;
+}
+
+.card-exercicio.aberto .card-seta {
+  transform: rotate(180deg);
+}
+
+.card-exercicio .card-conteudo {
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-exercicio.aberto .card-conteudo {
+  display: block;
+  padding-top: 1rem;
+}
+
+/* Card de preparação (vídeos) */
+.card-preparacao .video-wrapper {
+  margin: 1rem 0;
+}
+
+.card-preparacao .video-label {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.card-preparacao .video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.card-preparacao .links-preparacao {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.card-preparacao .links-preparacao li {
+  margin: 0.5rem 0;
+}
+
+.card-preparacao .links-preparacao a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card-preparacao .links-preparacao a:hover {
+  text-decoration: underline;
+}
+
+/* Telas de exercícios (mini-cards) */
+.tela-exercicios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mini-card-exercicio {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.mini-card-titulo {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.mini-card-desafio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.mini-card-desafio code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--card);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+.btn-gabarito {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-gabarito:hover {
+  background: var(--accent-hover);
+}
+
+.mini-card-exercicio .gabarito {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.mini-card-exercicio .gabarito.aberto {
+  display: block;
+}
+
+.mini-card-exercicio .gabarito pre {
+  margin: 0;
+  padding: 1rem;
+  background: var(--card);
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.mini-card-exercicio .gabarito code {
+  color: var(--text);
+}
+
+.card-dica {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.link-ver-todos {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.link-ver-todos:hover {
+  text-decoration: underline;
 }
 
 /* Semanas */
